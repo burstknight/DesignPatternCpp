@@ -25,7 +25,7 @@ namespace ObserverPattern{
 		// protected fields
 		protected:
 			// The list is to store all observer.
-			vector<myObserverInterface*> m_poObserver;
+			vector<myObserverInterface*> m_vpoObserver;
 
 		public:
 			mySubjectInterface();
