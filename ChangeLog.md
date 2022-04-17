@@ -8,6 +8,7 @@ This document is created to record all changes.
 - Define the class `mySubjectInterface` for observer pattern.
 
 ### Changed
+- Rename the class from `myAbstractObserver` to `myObserverInterface`.
 
 ### Fixed
 
