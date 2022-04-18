@@ -1,4 +1,5 @@
 #include "../includes/ObserverPattern.h"
+#include <cstddef>
 
 using namespace ObserverPattern;
 
@@ -47,3 +48,16 @@ void mySubjectInterface::removeObserver(myObserverInterface *poObserver){
 
 	this->m_vpoObserver.resize(iSizeOfObserverList - 1);
 }	// End of mySubjectInterface::removeObserver
+
+void mySubjectInterface::notifyData(const string sKey, void *pData){
+	if(NULL == pData)
+		return;
+
+	size_t iSizeOfObserverList = this->m_vpoObserver.size();
+	if(iSizeOfObserverList <= 0)
+		return;
+
+	for(size_t i = 0; i < iSizeOfObserverList; i++){
+		this->m_vpoObserver[i]->updateData(sKey, pData);	
+	}	// End of for-loop
+}	// End of mySubjectInterface::notifyData

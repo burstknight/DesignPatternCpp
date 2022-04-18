@@ -18,9 +18,9 @@ namespace ObserverPattern{
 	};	// End of class myObserverInterface
 
 	// Description:
-	// This abstract class is to send data to all observers. If you want
-	// use this class, you must define a new class to extand this class, 
-	// and then implement the abstract method `notifyData()`.
+	// This class is to send data to all observers. If you want to use observer
+	// pattern, you must define a new class to extand this class for all 
+	// functions of this class.
 	class mySubjectInterface{
 		// protected fields
 		protected:
@@ -42,7 +42,7 @@ namespace ObserverPattern{
 			// Description: Notify the data to observers
 			// @param sKey: The keyword of the data
 			// @param pData: The data will notify to observer.
-			virtual void notifyData(const string sKey, void *pData) = 0;
+			void notifyData(const string sKey, void *pData);
 	};	// End of class mySubjectInterface
 }	// End of namespace ObserverPattern
 
