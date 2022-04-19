@@ -21,15 +21,15 @@ namespace ObserverPattern{
 	// This class is to send data to all observers. If you want to use observer
 	// pattern, you must define a new class to extand this class for all 
 	// functions of this class.
-	class mySubjectInterface{
+	class mySubject{
 		// protected fields
 		protected:
 			// The list is to store all observer.
 			vector<myObserverInterface*> m_vpoObserver;
 
 		public:
-			mySubjectInterface();
-			~mySubjectInterface();
+			mySubject();
+			~mySubject();
 
 			// Description: Register observer into the list
 			// @param poObserver: The object pointer of the class myObserverInterface
@@ -43,6 +43,6 @@ namespace ObserverPattern{
 			// @param sKey: The keyword of the data
 			// @param pData: The data will notify to observer.
 			void notifyData(const string sKey, void *pData);
-	};	// End of class mySubjectInterface
+	};	// End of class mySubject
 }	// End of namespace ObserverPattern
 

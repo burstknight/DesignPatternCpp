@@ -3,15 +3,15 @@
 
 using namespace ObserverPattern;
 
-mySubjectInterface::mySubjectInterface(){
+mySubject::mySubject(){
 	this->m_vpoObserver.clear();
 }	// End of constructor
 
-mySubjectInterface::~mySubjectInterface(){
+mySubject::~mySubject(){
 	this->m_vpoObserver.clear();
 }	// End of deconstructor
 
-void mySubjectInterface::registerObserver(myObserverInterface *poObserver){
+void mySubject::registerObserver(myObserverInterface *poObserver){
 	if(NULL == poObserver)
 		return;
 	
@@ -26,9 +26,9 @@ void mySubjectInterface::registerObserver(myObserverInterface *poObserver){
 	if(false == isExist){
 		this->m_vpoObserver.push_back(poObserver);
 	}	// End of if-condition
-}	// End of mySubjectInterface::registerObserver
+}	// End of mySubject::registerObserver
 
-void mySubjectInterface::removeObserver(myObserverInterface *poObserver){
+void mySubject::removeObserver(myObserverInterface *poObserver){
 	if(NULL == poObserver)
 		return;
 
@@ -47,9 +47,9 @@ void mySubjectInterface::removeObserver(myObserverInterface *poObserver){
 	}	// End of for-loop
 
 	this->m_vpoObserver.resize(iSizeOfObserverList - 1);
-}	// End of mySubjectInterface::removeObserver
+}	// End of mySubject::removeObserver
 
-void mySubjectInterface::notifyData(const string sKey, void *pData){
+void mySubject::notifyData(const string sKey, void *pData){
 	if(NULL == pData)
 		return;
 
@@ -60,4 +60,4 @@ void mySubjectInterface::notifyData(const string sKey, void *pData){
 	for(size_t i = 0; i < iSizeOfObserverList; i++){
 		this->m_vpoObserver[i]->updateData(sKey, pData);	
 	}	// End of for-loop
-}	// End of mySubjectInterface::notifyData
+}	// End of mySubject::notifyData
