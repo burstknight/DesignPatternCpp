@@ -9,6 +9,7 @@ This document is created to record all changes.
 - Implement all member methods of the class `mySubject`.
 - Change the method `mySubject::notifyData()` from an abstract method to a instance method, and then implement it.
 - Add example code `testObserverPattern` to test observer pattern.
+- Add makefile to build this proejct.
 
 ### Changed
 - Rename the class from `myAbstractObserver` to `myObserverInterface`.
