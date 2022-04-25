@@ -8,7 +8,7 @@ int main(void){
 	myTestObserver *poObserver = new myTestObserver();
 
 	// Register observer to receive datum
-	poNotifier->registerObserver((myObserverInterface*)&poObserver);
+	poNotifier->registerObserver((myObserverInterface*)poObserver);
 
 	// Call the method run to generate datum
 	poNotifier->run();

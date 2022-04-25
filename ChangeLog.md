@@ -16,6 +16,7 @@ This document is created to record all changes.
 - Rename the class from `mySubjectInterface` to `mySubject` because this class is not an abstract class.
 
 ### Fixed
+- The example `testObserverPattern` did not run because using the address of the local varialbe that is a pointer of the object of the class `myTestObserver` to register into the class `mySubject`.
 
 ## Removed
 
