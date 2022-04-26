@@ -13,7 +13,8 @@ Sourc_Dir = ./src
 Bin_Dir = ./bin
 
 # This directory is set to install this project.
-Install_Dir := /usr/local/bin
+Install_Includes_Dir := /usr/local/include/DesignPatternCpp/
+Install_Libs_Dir := /usr/local/lib/DesingPatternCpp/
 
 # Set the code file extension.
 File_Extension := cpp
@@ -56,12 +57,15 @@ $(Bin_Dir)/%.o: $(Sourc_Dir)/%.$(File_Extension)
 
 # Install this project.
 install:
-	cp $(Bin_Dir)/$(Target) $(Install_Dir)
-	chmod +x $(Install_Dir)/$(Target)
+	mkdir -p $(Install_Includes_Dir)
+	mkdir -p $(Install_Libs_Dir)
+	cp $(Bin_Dir)/$(Target) $(Install_Libs_Dir)
+	cp $(Includes_Dir)/* $(Install_Includes_Dir)
 
 # Uninstall this project.
 uninstall:
-	rm -f $(Install_Dir)/$(Target)
+	rm -rf $(Install_Includes_Dir)
+	rm -rf $(Install_Libs_Dir)
 
 # Clean all compiled files.
 clean:
