@@ -30,7 +30,7 @@ Sourcs := $(wildcard $(Sourc_Dir)/*.$(File_Extension))
 Objects := $(patsubst $(Sourc_Dir)/%.$(File_Extension), $(Bin_Dir)/%.o, $(Sourcs))
 
 # Set the target file name
-Target = libDesignPattern.a
+Target = libDesignPatternCpp.a
 
 # Switch compile mode
 ifeq ($(debug), 1)

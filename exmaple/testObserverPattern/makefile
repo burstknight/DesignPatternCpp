@@ -18,7 +18,7 @@ File_Extension := cpp
 # Set compiler and flags.
 CC = g++
 CFLAGS = -I $(Includes_Dir) -I ../../includes
-LIBS = -L../../bin -lDesignPattern
+LIBS = -L../../bin -lDesignPatternCpp
 
 # List all source code in the src directory
 Sourcs := $(wildcard $(Sourc_Dir)/*.$(File_Extension))
