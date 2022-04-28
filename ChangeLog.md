@@ -4,6 +4,16 @@ This document is created to record all changes.
 -------------------
 ## [Unrelease]
 ### Added
+
+### Changed
+
+### Fixed
+
+## Removed
+
+-------------------
+## [1.0.0] - 2022/04/28
+### Added
 - Add the header file `includes/ObserverPattern.h` to define the class `myAbstractObserver` for observer pattern.
 - Define the class `mySubject` for observer pattern.
 - Implement all member methods of the class `mySubject`.
@@ -19,6 +29,4 @@ This document is created to record all changes.
 
 ### Fixed
 - The example `testObserverPattern` did not run because using the address of the local varialbe that is a pointer of the object of the class `myTestObserver` to register into the class `mySubject`.
-
-## Removed
 
