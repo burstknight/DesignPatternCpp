@@ -1,3 +1,6 @@
+#ifndef OBSERVER_PATTERN
+#define OBSERVER_PATTERN
+
 #include <vector>
 #include <string>
 using namespace std;
@@ -46,3 +49,4 @@ namespace ObserverPattern{
 	};	// End of class mySubject
 }	// End of namespace ObserverPattern
 
+#endif

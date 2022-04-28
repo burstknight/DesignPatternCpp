@@ -11,6 +11,7 @@ This document is created to record all changes.
 - Add example code `testObserverPattern` to test observer pattern.
 - Add makefile to build this proejct.
 - Add the header file `./includes/DesignPatternCpp.h` to include others header files.
+- Add [include guard](https://en.wikipedia.org/wiki/Include_guard) into header files.
 
 ### Changed
 - Rename the class from `myAbstractObserver` to `myObserverInterface`.
