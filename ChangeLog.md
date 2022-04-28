@@ -10,6 +10,7 @@ This document is created to record all changes.
 - Change the method `mySubject::notifyData()` from an abstract method to a instance method, and then implement it.
 - Add example code `testObserverPattern` to test observer pattern.
 - Add makefile to build this proejct.
+- Add the header file `./includes/DesignPatternCpp.h` to include others header files.
 
 ### Changed
 - Rename the class from `myAbstractObserver` to `myObserverInterface`.

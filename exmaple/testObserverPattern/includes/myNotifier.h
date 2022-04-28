@@ -1,4 +1,4 @@
-#include "../../../includes/ObserverPattern.h"
+#include "../../../includes/DesignPatternCpp.h"
 
 using namespace ObserverPattern;
 struct Point{
